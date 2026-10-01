@@ -1,3 +1,7 @@
+# Paid API execution blocked by the account owner on 2026-10-01.
+# This guard runs before imports, environment loading, document access, or any API call.
+raise SystemExit("유료 AI API 사용이 차단되어 ChatPDF 실행을 중지합니다.")
+
 from langchain_classic import hub
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser

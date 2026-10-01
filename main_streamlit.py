@@ -1,3 +1,12 @@
+# Paid API execution blocked by the account owner on 2026-10-01.
+# Stop before reading credentials, uploading documents, creating embeddings, or loading model clients.
+import streamlit as _cost_guard_ui
+_cost_guard_ui.set_page_config(page_title="ChatPDF · 유료 API 차단", layout="centered")
+_cost_guard_ui.title("ChatPDF")
+_cost_guard_ui.warning("계정 소유자의 요청으로 유료 AI API 사용을 차단했습니다. AI 생성·질문 기능은 현재 중지되어 있습니다.")
+_cost_guard_ui.stop()
+raise SystemExit("Paid AI API execution is blocked by the account owner.")
+
 # 배포시 ---- (맨위 추가)
 __import__('pysqlite3')
 import sys
